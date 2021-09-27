@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <script defer src='index.js'></script>
+    <title>Youtube BrowserWindow</title>
+    <style>
+    body{
+      background: red;
+    }
+    div{
+        background: grey;
+        text-align:center;
+        width:470px ;
+        height:420px;
+        border-radius: 10px;
+        border-width:2px solid black;
+        cursor:not-allowed;
+    }
+    iframe {
+        width:400px;
+        height:300px;
+    } 
+    </style>
+    <div class="View">
+    <button id="ChangeVideo">Сменить видео</button>
+    </div>
+</head>
+<body>
+<script>
+    var d=document.querySelector("div.View");
+    var button=document.querySelector("button");
+    var tittle=document.createElement("h3");
+    var vde=document.createElement("iframe");
+    var dateofcreate=document.createElement("p");
+    let name=["Python 2021: What's New In Python 2021?",'Python Samples in Origin 2021','Why You Shouldn’t Learn Python In 2021',"Python New Features 2021 | Why Python?",'JavaScript Crash Course 2021 - Master JavaScript in One Video!','Learn JavaScript — A Tutorial For Beginners (2021)','What is new in Javascript 2021','Should You Learn Javascript in 2021','Python for Beginners: Learn how to code properly in 2021','Intro to Javascript','Whats New In JavaScript ECMAScript 2021','Learn JavaScript in just 10 Minutes (2021)','FREE Javascript 6 Hour Full Course For Beginners 💻 [2021]','Learn Python step by step in 2021','Complete JavaScript Tutorial in English in 2021'];
+    let date=['22.10,2020','22.10.2020','13.12.2020',"09.13.2020",'01.01.2021','08.01.2021',"13.01.2021",'04.02.2021','14.02.2021','07.05.2021',"03.06.2021",'21.06.2021','22.06.2021','03.08.2021','09.09.2021'];
+    let source=['https://www.youtube.com/watch?v=-g5oAOXmdPc&ab_channel=Simplilearn','https://www.youtube.com/watch?v=7MqhVSVnsN4&ab_channel=OriginLabCorp.','https://www.youtube.com/watch?v=sO1ctUNQ1k8&ab_channel=Devslopes','https://www.youtube.com/watch?v=PWBC7uAH6l0&ab_channel=Intellipaat','https://www.youtube.com/watch?v=g7T23Xzys-A&ab_channel=JavaScriptMastery','https://www.youtube.com/watch?v=-4jokJpvFwc&ab_channel=CareerFoundry','https://www.youtube.com/watch?v=YwHJCTXg6Es&ab_channel=HiteshChoudhary','https://www.youtube.com/watch?v=U89aUa_bVBE&ab_channel=Devslopes','https://www.youtube.com/watch?v=8lLWtr5Kzl0&ab_channel=LondonAppDeveloper','https://www.youtube.com/watch?v=cqIsWodiCsA&ab_channel=GreatLearning','https://www.youtube.com/watch?v=GahDbdshd0Q&ab_channel=ProgramWithErik','https://www.youtube.com/watch?v=39GRFGm2JRY&ab_channel=CleverProgrammer','https://www.youtube.com/watch?v=gYZhIVCPlFY&ab_channel=ProgrammingWithAvelx','https://www.youtube.com/watch?v=lk2rWa4iM68&ab_channel=GreatLearning','https://www.youtube.com/watch?v=qDq_tKjVVJA&ab_channel=Iballdesigningdeveloper'];
+    let list=0;
+    tittle.setAttribute('innerHTML',name[list]);
+    tittle.innerHTML=name[list];
+    dateofcreate.setAttribute('innerHTML',date[list]);
+    dateofcreate.innerHTML=date[list];
+    vde.setAttribute('source',source[list]);
+    vde.src=source[list];
+    d.appendChild(tittle);
+    d.appendChild(vde);
+    d.appendChild(dateofcreate);
+  button.addEventListener("click",function(){
+    list++;
+    tittle.setAttribute('innerHTML',name[list]);
+    tittle.innerHTML=name[list];
+    dateofcreate.setAttribute('textcontent',date[list]);
+    dateofcreate.innerHTML=date[list];
+    vde.setAttribute('textCcontent',source[list]);
+    vde.src=source[list];
+    d.appendChild(tittle);
+    d.appendChild(vde);
+    d.appendChild(dateofcreate);
+ });
+</script>
+</body>
+</html>
